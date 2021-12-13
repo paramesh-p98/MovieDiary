@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Watchlist />} />
-          <Route exact path="/watched" element={<Watched />} />
-          <Route exact path="/add" element={<Add />} />
+          <Route exact path="/MovieDiary/" element={<Watchlist />} />
+          <Route exact path="/MovieDiary/watched" element={<Watched />} />
+          <Route exact path="/MovieDiary/add" element={<Add />} />
         </Routes>
       </Router >
     </GlobalProvider>
