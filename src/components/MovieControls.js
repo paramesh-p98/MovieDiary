@@ -9,25 +9,23 @@ const MovieControls = ({ movie, type }) => {
             <div className="inner-card-controls">
                 {type === 'watchlist' && (
                     <>
-                        <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
+                        <button title="Add to Watched" className="ctrl-btn tooltip" onClick={() => addMovieToWatched(movie)}>
                             <i className="fa-fw far fa-eye"></i>
                         </button> &nbsp;&nbsp;
-                        <button className="ctrl-btn" onClick={() => removeMovieFromWatchList(movie.id)}>
+                        <button title="Remove" className="ctrl-btn tooltip" onClick={() => removeMovieFromWatchList(movie.id)}>
                             <i className="fa fa-times"></i>
                         </button>
-
                     </>
                 )}
 
                 {type === 'watched' && (
                     <>
-                        <button className="ctrl-btn" onClick={() => moveToWatchlist(movie)}>
+                        <button title="Add to Watchlist" className="ctrl-btn tooltip" onClick={() => moveToWatchlist(movie)}>
                             <i className="fa-fw far fa-eye-slash"></i>
                         </button> &nbsp;&nbsp;
-                        <button className="ctrl-btn" onClick={() => removeFromWatched(movie.id)}>
+                        <button title="Remove" className="ctrl-btn tooltip" onClick={() => removeFromWatched(movie.id)}>
                             <i className="fa fa-times"></i>
                         </button>
-
                     </>
                 )}
 
